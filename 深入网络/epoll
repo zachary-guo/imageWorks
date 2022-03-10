@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-10T10:36:40.784Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.121 Safari/537.36" etag="-zpGFY-qV85gtXB2706i" version="17.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-10T10:41:31.757Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.121 Safari/537.36" etag="2_m0A-BQyID8sgvsIH5r" version="17.1.0" type="github">
   <diagram id="4uJ7A8cCDtiXMhN5tGC2" name="Page-1">
-    <mxGraphModel dx="1538" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1138" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -268,7 +268,7 @@
         <mxCell id="vo0YSZbmdnbdoB1TgKed-67" value="&lt;b&gt;&lt;font face=&quot;Comic Sans MS&quot;&gt;struct path f_path&lt;/font&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82B366;comic=1;imageWidth=24;enumerate=0;" parent="1" vertex="1">
           <mxGeometry x="257.04" y="451" width="174" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="J73YuPp8DnxScCld4RBE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.115;exitY=0.01;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.801;entryDx=0;entryDy=0;fontColor=#008000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="vo0YSZbmdnbdoB1TgKed-69" target="vo0YSZbmdnbdoB1TgKed-44">
+        <mxCell id="J73YuPp8DnxScCld4RBE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.115;exitY=0.01;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.801;entryDx=0;entryDy=0;fontColor=#008000;exitPerimeter=0;entryPerimeter=0;" parent="1" source="vo0YSZbmdnbdoB1TgKed-69" target="vo0YSZbmdnbdoB1TgKed-44" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="vo0YSZbmdnbdoB1TgKed-69" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;b&gt;struct file *file&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82B366;comic=1;imageWidth=24;" parent="1" vertex="1">
@@ -1036,11 +1036,11 @@
         <mxCell id="BsgHhvZRrKgo82mvjOD9-4" value="&lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;file_operations&lt;/b&gt;&lt;/font&gt; 是把&lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;系统调用&lt;/b&gt;&lt;/font&gt;和&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;驱动程序&lt;/font&gt;&lt;/b&gt;关联起来的关键数据结构，这个结构的每一个成员都对应着一个系统调用。驱动程序就是向下控制硬件，向上给应用程序提供接口。&lt;br&gt;&lt;br&gt;&lt;br&gt;驱动程序接口是由 &lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;file_operations&lt;/b&gt;&lt;/font&gt; 结构体向系统说明的，它定义在 &lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;include/linux/fs.h&lt;/b&gt;&lt;/font&gt; 中。应用程序只需要调用 file_operations 里定义的接口即可，最终由设备驱动程序实现。file_operations 结构中的每个成员必须指向驱动中已实现的函数, 这些函数实现一个特别的操作, 或者对于不支持的操作留置为 NULL。可以看到，&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;每个函数的参数会不一样&lt;/font&gt;&lt;/b&gt;。" style="text;whiteSpace=wrap;html=1;fontSize=11;fontFamily=Courier New;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="16" y="1190" width="800" height="116" as="geometry" />
         </mxCell>
-        <mxCell id="J73YuPp8DnxScCld4RBE-1" value="file_operations 的 poll 是驱动提供给应用程序探测设备文件是否有数据可读或可写的接口。&lt;br&gt;&lt;br&gt;并不是否所有的文件类型都可以被 epoll 监视，只有底层驱动实现了 file_operations 中 poll 函数的文件类型才可以被 epoll 监视！&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;socket 类型的文件驱动是实现了 poll 函数的，因此才可以被 epoll 监视&lt;/font&gt;&lt;/b&gt;。" style="text;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="J73YuPp8DnxScCld4RBE-1" value="file_operations 的 poll 是驱动提供给应用程序探测设备文件是否有数据可读或可写的接口。&lt;br&gt;&lt;br&gt;并不是否所有的文件类型都可以被 epoll 监视，只有底层驱动实现了 file_operations 中 poll 函数的文件类型才可以被 epoll 监视！&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;socket 类型的文件驱动是实现了 poll 函数的，因此才可以被 epoll 监视&lt;/font&gt;&lt;/b&gt;。" style="text;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="16" y="1961" width="547" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="J73YuPp8DnxScCld4RBE-4" value="&lt;font style=&quot;font-size: 9px&quot;&gt;file 对象内部有一个指针指向 socket 对象，socket 对象内部也有一个指针指向 file 对象&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontColor=#008000;" vertex="1" parent="1">
-          <mxGeometry x="-151" y="410" width="161" height="56" as="geometry" />
+        <mxCell id="J73YuPp8DnxScCld4RBE-4" value="&lt;font style=&quot;font-size: 10px&quot;&gt;file 对象内部有一个指针指向 socket 对象，socket 对象内部也有一个指针指向 file 对象&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;fontColor=#008000;" parent="1" vertex="1">
+          <mxGeometry x="96.12" y="732" width="164.42" height="56" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
