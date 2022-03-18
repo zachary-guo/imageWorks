@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-18T10:45:57.596Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36" etag="aaWMmuKhBceLQ8n_o6uY" version="17.1.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-03-18T10:47:17.036Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.136 Safari/537.36" etag="D7rL97GmKNRAfNNdK1hW" version="17.1.3" type="github" pages="2">
   <diagram id="4uJ7A8cCDtiXMhN5tGC2" name="Page-1">
     <mxGraphModel dx="1138" dy="616" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
@@ -2653,9 +2653,9 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="skik9kydzXlefVCuJJrr-53" value="2.3 通过软中断最终调用协议栈，会调用&amp;nbsp;sock&amp;nbsp;的数据就绪的函数指针，即&amp;nbsp;sock_def_readable&amp;nbsp;方法" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Lucida Console;fontColor=none;fontStyle=1;labelBackgroundColor=#FFF2CC;" vertex="1" connectable="0" parent="skik9kydzXlefVCuJJrr-52">
+        <mxCell id="skik9kydzXlefVCuJJrr-53" value="2.3 通过软中断最终调用协议栈，sock&amp;nbsp;的接收队列有数据了，接着会调用&amp;nbsp;sock&amp;nbsp;的数据就绪的函数指针指向的方法，即&amp;nbsp;sock_def_readable&amp;nbsp;方法" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Lucida Console;fontColor=none;fontStyle=1;labelBackgroundColor=#FFF2CC;" vertex="1" connectable="0" parent="skik9kydzXlefVCuJJrr-52">
           <mxGeometry x="-0.0432" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="36" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="skik9kydzXlefVCuJJrr-45" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;&lt;b&gt;2.&amp;nbsp;sk-&amp;gt;sk_data_ready&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;comic=1;imageWidth=24;" vertex="1" parent="ZR6vJ0DCSWkrJsbb1GMi-1">
