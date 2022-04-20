@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-20T13:36:33.160Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.133 Safari/537.36" etag="0f4JkPTO_avPKOCgbn0W" version="17.4.6" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-04-20T13:44:34.483Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.133 Safari/537.36" etag="oDpfviW_XlDEN1RkJP5u" version="17.4.6" type="github" pages="2">
   <diagram id="g3pUwDZOA_sNBJG3YG1t" name="EventLoop">
     <mxGraphModel dx="2622" dy="770" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -376,7 +376,7 @@
         <mxCell id="0BKrLKn0O6517ZU3vEA0-3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fontColor=#000000;gradientColor=none;" vertex="1" parent="sURLD4bZut9NmJibIsKU-30">
           <mxGeometry x="63" y="268" width="10" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="0BKrLKn0O6517ZU3vEA0-4" value="1.3&amp;nbsp;注册 NioServerSocketChannel" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#000000;exitX=1.033;exitY=0.639;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="sURLD4bZut9NmJibIsKU-30" source="sURLD4bZut9NmJibIsKU-27">
+        <mxCell id="0BKrLKn0O6517ZU3vEA0-4" value="1.3&amp;nbsp;注册 NioServerSocketChanne&lt;br&gt;config().group().register(channel);" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;strokeColor=#000000;exitX=1.033;exitY=0.639;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="sURLD4bZut9NmJibIsKU-30" source="sURLD4bZut9NmJibIsKU-27">
           <mxGeometry x="-0.1302" width="80" relative="1" as="geometry">
             <mxPoint x="-17" y="283.83000000000004" as="sourcePoint" />
             <mxPoint x="61" y="282" as="targetPoint" />
@@ -390,17 +390,30 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0BKrLKn0O6517ZU3vEA0-5" value="&lt;b&gt;Boss EventLoopGrop&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="659" y="350" width="136" height="517" as="geometry" />
+        <mxCell id="0BKrLKn0O6517ZU3vEA0-5" value="&lt;b&gt;Boss EventLoopGroup&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="638" y="350" width="136" height="517" as="geometry" />
         </mxCell>
         <mxCell id="0BKrLKn0O6517ZU3vEA0-8" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fontColor=#000000;gradientColor=none;" vertex="1" parent="0BKrLKn0O6517ZU3vEA0-5">
           <mxGeometry x="63" y="268" width="10" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="0BKrLKn0O6517ZU3vEA0-10" value="&lt;b&gt;Boss EventLoopGrop&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="831" y="350" width="136" height="517" as="geometry" />
+        <mxCell id="0BKrLKn0O6517ZU3vEA0-13" value="return&amp;nbsp;ChannelFuture" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;rounded=0;fontFamily=Helvetica;strokeColor=#000000;entryX=1.15;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="0BKrLKn0O6517ZU3vEA0-5" target="0BKrLKn0O6517ZU3vEA0-3">
+          <mxGeometry x="-0.0036" y="18" relative="1" as="geometry">
+            <mxPoint x="63" y="292" as="sourcePoint" />
+            <mxPoint x="-17" y="292" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0BKrLKn0O6517ZU3vEA0-10" value="&lt;b&gt;Boss &lt;br&gt;EventLoop&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="792" y="350" width="136" height="517" as="geometry" />
         </mxCell>
         <mxCell id="0BKrLKn0O6517ZU3vEA0-11" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;glass=0;labelBackgroundColor=none;sketch=0;fontFamily=Lucida Console;fontColor=#000000;gradientColor=none;" vertex="1" parent="0BKrLKn0O6517ZU3vEA0-10">
           <mxGeometry x="63" y="268" width="10" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="0BKrLKn0O6517ZU3vEA0-14" value="register" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontFamily=Helvetica;strokeColor=#000000;exitX=1.025;exitY=0.242;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.025;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0BKrLKn0O6517ZU3vEA0-3" target="0BKrLKn0O6517ZU3vEA0-8">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="564" y="626" as="sourcePoint" />
+            <mxPoint x="644" y="626" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
